@@ -69,9 +69,10 @@ const displayModalData = data => {
                 <h5 class="modal-title" id="staticBackdropLabel">${data.strPlayer}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body ">
                     <img style="width: 100%;height: 200px;object-fit:cover;"  src="${data.strBanner ? data.strBanner : data.strCutout ? data.strCutout : data.strThumb ? data.strThumb : 'https://bit.ly/3vf1qNA'}" alt="banner player image">
-                    <table class="mt-4 table">
+                    <div class="table-responsive-sm table-responsive">
+                        <table class="mt-4 table ">
                         <tr>
                             <th>Nationality:</th>
                             <td>${data.strNationality}</td>
@@ -105,6 +106,7 @@ const displayModalData = data => {
                             <td>${data.strWebsite ? `<a target="_blank" href="https://${data.strWebsite}">Website</a>` : 'nill' }</td>
                         </tr>
                     </table>
+                    </div>
                     <div class="row">
                         <div class="col-lg-3">
                             <img src="${data.strFanart1 ? data.strFanart1 : data.strThumb}" alt="">
