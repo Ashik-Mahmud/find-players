@@ -1,0 +1,90 @@
+/* style sheet working here  */
+
+*,
+*::after,
+*::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+body {
+    font-family: poppins;
+    font-size: 16px;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+/* custom class  */
+.container{
+    max-width: min(100% - 2rem, 1200px);
+    margin-inline: auto;
+}
+
+/* style  */
+#header{
+    padding: 1rem;
+    position: relative;
+    background: #f3f3f3;
+}
+#header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#header input{
+    padding: .6rem 0.7rem;
+    border: 1px solid rgb(177, 177, 177);
+    font-size: 1rem;
+    font-family: poppins;
+    border-radius: 4px;
+    width: min(100%, 35%);
+
+}
+
+#player-wrapper{
+    position: relative;
+    padding: 2rem 0rem;
+}
+
+.player-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    position: relative;
+}
+.player-content .card{
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    cursor: pointer;
+}
+.card img{
+   width: 100%;
+   object-fit: cover;
+   height: 130px;
+   object-position: center center;
+}
+.card .avatar{
+    background-color: #f3f3f3;
+    padding: .5rem;
+    margin-right: 1rem;
+    
+}
+.details{
+    margin-top: 1rem;
+}
+.details h4{
+    margin-bottom: .4rem;
+}
+.card .details > :is(span, p){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: .9rem;
+   
+}
