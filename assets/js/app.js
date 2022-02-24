@@ -57,7 +57,7 @@ const loadModalData = async (playerId) => {
     let data = await response.json();
     displayModalData(data.players[0]);
     setTimeout(() => {
-        document.getElementById('preloader').style.display ='none';
+        document.getElementById('preloader').style.display = 'none';
     }, 3000);
 }
 /* display modal data  */
@@ -127,10 +127,10 @@ const displayModalData = data => {
                 </div>`;
     modalContent.insertAdjacentHTML('beforeend', modalTag);
     const closeBtn = document.querySelectorAll('[data-bs-dismiss="modal"]');
-    closeBtn.forEach((btn) =>{
-        btn.addEventListener('click', ()=>{
+    closeBtn.forEach((btn) => {
+        btn.addEventListener('click', () => {
             setTimeout(() => {
-                document.getElementById('preloader').style.display ='grid';
+                document.getElementById('preloader').style.display = 'grid';
             }, 1000);
         })
     })
